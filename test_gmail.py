@@ -33,7 +33,7 @@ def initialize_gmail():
             else:
                 # Check if credentials.json exists
                 if not Path("credentials.json").exists():
-                    print("❌ ERROR: credentials.json not found!")
+                    print(" ERROR: credentials.json not found!")
                     print("\nTo enable Gmail:")
                     print("1. Go to https://console.cloud.google.com/")
                     print("2. Create a project and enable Gmail API")
@@ -57,7 +57,7 @@ def initialize_gmail():
         return True
         
     except Exception as e:
-        print(f"❌ Gmail initialization error: {e}")
+        print(f" Gmail initialization error: {e}")
         return False
 
 
@@ -84,11 +84,11 @@ def send_email(to, subject, body):
         result = gmail_service.users().messages().send(
             userId="me", body=message_body).execute()
         
-        print(f"✅ Email sent successfully! Message ID: {result['id']}")
+        print(f" Email sent successfully! Message ID: {result['id']}")
         return True
         
     except Exception as e:
-        print(f"❌ Error sending email: {str(e)}")
+        print(f" Error sending email: {str(e)}")
         return False
 
 
@@ -100,7 +100,7 @@ def test_gmail():
     
     # Initialize
     if not initialize_gmail():
-        print("\n❌ Gmail initialization failed")
+        print("\n Gmail initialization failed")
         return
     
     print("\n" + "="*60)
@@ -130,4 +130,5 @@ def test_gmail():
 
 if __name__ == "__main__":
     load_dotenv()
+
     test_gmail()
