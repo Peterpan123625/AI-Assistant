@@ -217,4 +217,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-THIS IS A HOBBY PROJECT, RUN testv5 to actually see how it works live. and again feel free to use some of this code idk if its that good LOL
+THIS IS A HOBBY PROJECT, RUN testv5 to actually see how it works live. and again feel free to use some of this code idk if its that good LOL. If you want to use it offline comment out the parts that use the API
